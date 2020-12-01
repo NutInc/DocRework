@@ -1,9 +1,8 @@
-using Exiled.API.Features;
-
 namespace DocRework.Commands
 {
     using AbilityControllers;
     using CommandSystem;
+    using Exiled.API.Features;
     using System;
 
     [CommandHandler(typeof(ClientCommandHandler))]
