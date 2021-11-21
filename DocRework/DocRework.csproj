@@ -6,16 +6,17 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="EXILED" Version="2.1.18" />
+      <PackageReference Include="EXILED" Version="3.7.2" />
       <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies.net472" Version="1.0.0">
         <PrivateAssets>all</PrivateAssets>
         <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       </PackageReference>
+      <PackageReference Include="YamlDotNet" Version="11.2.1" />
     </ItemGroup>
 
     <ItemGroup>
       <Reference Include="Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
-        <HintPath>..\..\SubclassItems\SubclassItems\bin\Release\net472\Assembly-CSharp_publicized.dll</HintPath>
+        <HintPath>lib\Assembly-CSharp-Publicized.dll</HintPath>
       </Reference>
       <Reference Include="Assembly-CSharp-firstpass, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
         <HintPath>..\..\SubclassItems\SubclassItems\bin\Release\net472\Assembly-CSharp-firstpass.dll</HintPath>
@@ -28,9 +29,6 @@
       </Reference>
       <Reference Include="UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
         <HintPath>..\..\SubclassItems\SubclassItems\bin\Release\net472\UnityEngine.CoreModule.dll</HintPath>
-      </Reference>
-      <Reference Include="YamlDotNet, Version=8.0.0.0, Culture=neutral, PublicKeyToken=ec19458f3c15af5e">
-        <HintPath>..\..\SubclassItems\SubclassItems\bin\Release\net472\YamlDotNet.dll</HintPath>
       </Reference>
     </ItemGroup>
 

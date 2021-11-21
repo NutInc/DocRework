@@ -80,7 +80,7 @@ namespace DocRework.AbilityControllers
 
             // Sent Zombies notification that they got healed.
             if (canDisplay)
-                p.HintDisplay.Show(new TextHint($"<color=red>+{hpGiven} HP</color>",
+                p.HintDisplay.Show(new TextHint($"<color=red>+{Math.Round(hpGiven, 1, MidpointRounding.AwayFromZero)} HP</color>",
                     new HintParameter[] {new StringHintParameter("")}, null, 2f));
         }
 
