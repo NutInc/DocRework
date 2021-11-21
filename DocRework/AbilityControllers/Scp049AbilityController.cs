@@ -43,6 +43,7 @@ namespace DocRework.AbilityControllers
             float hpGiven;
             bool canDisplay = true;
             float missingHp = p.MaxHealth - p.Health;
+            float adjMultiplier = multiplier / 100;
 
             if (p.Health == p.MaxHealth)
                 canDisplay = false;
@@ -65,15 +66,15 @@ namespace DocRework.AbilityControllers
             // Percentage HP
             else
             {
-                if (p.Health + missingHp * multiplier > p.MaxHealth)
+                if (p.Health + missingHp * adjMultiplier > p.MaxHealth)
                 {
                     hpGiven = p.MaxHealth - p.Health;
                     p.Health = p.MaxHealth;
                 }
                 else
                 {
-                    hpGiven = missingHp * multiplier;
-                    p.Health += missingHp * multiplier;
+                    hpGiven = missingHp * adjMultiplier;
+                    p.Health += missingHp * adjMultiplier;
                 }
             }
 
