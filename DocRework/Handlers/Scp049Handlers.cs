@@ -38,7 +38,7 @@ namespace DocRework.Handlers
             // Heal the doctor for the configured percentage if it's missing health if the config option for it is set to true
             if (Instance.Config.DoctorConfigs.AllowDocSelfHeal)
                 Scp049AbilityController.ApplySelfHeal(ev.Scp049,
-                    Instance.Config.DoctorConfigs.DocMissingHealthPercentage);
+                    Instance.Config.DoctorConfigs.DocMissingHealthPercentage / 100);
         }
     }
 }
