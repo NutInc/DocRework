@@ -12,12 +12,15 @@ namespace DocRework.AbilityControllers
             if (attacker.Role != RoleType.Scp0492 || target.Team == Team.SCP)
                 return;
 
-            foreach (Player ply in Player.List.Where(player => player.Team != Team.SCP && player != attacker))
+            foreach (var ply in Player.List)
             {
+                if (ply.Team == Team.SCP && ply == attacker)
+                    return;
+                
                 if (Vector3.Distance(attacker.Position, ply.Position) > 1.65f)
                     return;
 
-                ply.Hurt(aoeDamage, DamageTypes.Scp0492, attacker.Nickname, attacker.Id);
+                ply.Hurt(aoeDamage, attacker, DamageTypes.Scp0492);
             }
         }
     }
