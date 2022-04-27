@@ -10,13 +10,13 @@ namespace DocRework.Commands
     {
         public bool Execute(ArraySegment<string> arguments, ICommandSender sender, out string response)
         {
-            var ply = Player.Get((sender as CommandSender)?.SenderId);
+            var ply = Player.Get(sender);
             response = Scp049AbilityController.CallZombieReinforcement(ply);
             return true;
         }
 
         public string Command => "cr";
         public string[] Aliases => Array.Empty<string>();
-        public string Description => "";
+        public string Description => "Calls in reinforcements from spectator as a zombie.";
     }
 }
